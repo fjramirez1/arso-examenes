@@ -55,6 +55,28 @@ public class ServicioDocumentos implements IServicioDocumentos {
 	}
 
 	@Override
+	public void eliminarColaborador(String colaborador) {
+		List<Documento> documentos = repositorio.findAll();
+		for (Documento documento : documentos) {
+			String colaboradores = documento.getColaboradores();
+			if (colaboradores == null || colaboradores.trim().isEmpty()) {
+				continue;
+			}
+			StringBuilder nuevosColaboradores = new StringBuilder();
+			for (String c : colaboradores.split(",")) {
+				if (!colaborador.equals(c.trim())) {
+					if (nuevosColaboradores.length() > 0) {
+						nuevosColaboradores.append(",");
+					}
+					nuevosColaboradores.append(c.trim());
+				}
+			}
+			documento.setColaboradores(nuevosColaboradores.toString());
+			repositorio.save(documento);
+		}
+	}
+
+	@Override
 	public List<Documento> recuperarDocumentosPropietario(String propietario) {
 		return repositorio.findByPropietario(propietario);
 	}

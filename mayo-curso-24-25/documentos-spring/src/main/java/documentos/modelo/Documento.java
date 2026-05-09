@@ -1,7 +1,10 @@
 package documentos.modelo;
 
+import org.springframework.data.annotation.Id;
+
 public class Documento {
 
+	@Id
 	private String id;
 	private String propietario;
 	private String colaboradores;

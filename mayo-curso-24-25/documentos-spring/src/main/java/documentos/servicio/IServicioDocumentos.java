@@ -14,5 +14,7 @@ public interface IServicioDocumentos {
 
 	void añadirColaborador(String id, String colaborador);
 
+	void eliminarColaborador(String colaborador);
+
 	List<Documento> recuperarDocumentosPropietario(String propietario);
 }

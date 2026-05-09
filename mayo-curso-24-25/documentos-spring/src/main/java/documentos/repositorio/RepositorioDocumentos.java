@@ -12,4 +12,6 @@ public interface RepositorioDocumentos extends PagingAndSortingRepository<Docume
 
 	List<Documento> findByPropietario(String propietario);
 
+	List<Documento> findAll();
+
 }
