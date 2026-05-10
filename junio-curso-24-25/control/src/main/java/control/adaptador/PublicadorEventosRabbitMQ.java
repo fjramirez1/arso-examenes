@@ -15,6 +15,7 @@ public class PublicadorEventosRabbitMQ implements PublicadorEventos {
 
 	public PublicadorEventosRabbitMQ() {
 		// Verificamos la conexión al arrancar para detectar problemas pronto
+		// Como el microservicio no se despliega en docker, rabbit tiene que estar inicializado
 		try {
 			String uri = getRabbitMQUri();
 			ConnectionFactory factory = new ConnectionFactory();

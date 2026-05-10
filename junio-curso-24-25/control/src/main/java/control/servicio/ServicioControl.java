@@ -4,21 +4,20 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import control.adaptador.PublicadorEventosRabbitMQ;
 import control.evento.EventoAccesoCreado;
 import control.modelo.Acceso;
 import control.puerto.PublicadorEventos;
 
 public class ServicioControl implements IServicioControl {
-	private final PublicadorEventos publicadorEventos = new PublicadorEventosRabbitMQ();
+	private final PublicadorEventos publicadorEventos = FactoriaServicios.getServicio(PublicadorEventos.class);
 
 	private List<String> usuariosRegistrados;
 
 	public ServicioControl() {
 		usuariosRegistrados = new ArrayList<>();
-		usuariosRegistrados.add("javi@@example.com");
-		usuariosRegistrados.add("maria@@example.com");
-		usuariosRegistrados.add("pedro@@example.com");
+		usuariosRegistrados.add("javi@example.com");
+		usuariosRegistrados.add("maria@example.com");
+		usuariosRegistrados.add("pedro@example.com");
 	}
 
 	@Override

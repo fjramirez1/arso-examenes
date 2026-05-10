@@ -15,7 +15,7 @@ public class ControladorAuth {
 
 	// curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "idMonitor=1&password=arso-2025" http://localhost:8080/api/auth/login
 
-	// eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqdWFuIiwicm9sZXMiOiJQUk9GRVNPUiIsImV4cCI6MTc0MDA2MTM2NX0.qRhl9H-5dd_kogZXwWZE5QcIf5fH-MyAX6X-DF-2B3U
+	// eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZXMiOiJVU1VBUklPIiwiZXhwIjoxNzc4NDE3MzQ0fQ.78qac7DNL_E8l7Cx61K56L0OIABKZ14IuUGlPeFIdwo
 
 	@POST
 	@Path("/login")
