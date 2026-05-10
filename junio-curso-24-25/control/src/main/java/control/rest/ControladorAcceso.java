@@ -15,14 +15,14 @@ import javax.ws.rs.core.UriInfo;
 import control.modelo.Acceso;
 import control.rest.dto.AccesoInputDTO;
 import control.servicio.FactoriaServicios;
-import control.servicio.ServicioControl;
+import control.servicio.IServicioControl;
 
 @Path("acceso")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class ControladorAcceso {
 
-	private final ServicioControl servicio = FactoriaServicios.getServicio(ServicioControl.class);
+	private final IServicioControl servicio = FactoriaServicios.getServicio(IServicioControl.class);
 
 	@Context
 	private UriInfo uriInfo;
