@@ -30,8 +30,8 @@ public class ControladorAcceso {
 	@Context
 	private HttpServletRequest servletRequest;
 
-	// curl -i -X POST -H "Content-type: application/json" -d @1.json
-	// http://localhost:8080/api/acceso/
+	// curl -i -X POST -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZXMiOiJVU1VBUklPIiwiZXhwIjoxNzc4NDE1NjMwfQ.WJGELy9TW682LPrk9dUMj2Ui-5NU55kaqKoZarRkRNc" -d "{\"tipoAcceso\":\"ENTRADA\",\"email\":\"javi@@example.com\",\"idMonitor\":1,\"fechaHora\":\"2025-06-10T10:00:00.000+0000\"}" http://localhost:8080/api/acceso/
+	
 	@POST
 	@PermitAll
 	@RolesAllowed("USUARIO")
